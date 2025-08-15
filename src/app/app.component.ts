@@ -3,10 +3,20 @@ import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './customcomponet/profile.componet';
-import { never } from 'rxjs';
 import { CounterAppComponent } from './counter-app/counter-app.component';
 import { EventhandlingComponent } from './eventhandling/eventhandling.component';
-
+import { StudentResultComponent } from './student-result/student-result.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { AttributeSelectorComponent } from './component-decorator/selector/attribute-selector/attribute-selector.component';
+import { ClassSelectorComponent } from './component-decorator/selector/class-selector/class-selector.component';
+import { IdSelectorComponent } from './component-decorator/selector/id-selector/id-selector.component';
+import { NameSelectorComponent } from './component-decorator/selector/name-selector/name-selector.component';
+import { StylesComponent } from './styles/styles.component';
+import { StringInterpolationComponent } from './data-binding/string-interpolation/string-interpolation.component';
+import { PropertyBindingComponent } from './data-binding/property-binding/property-binding.component';
+import { ClassBindingComponent } from "./data-binding/class-binding/class-binding.component";
+import { EventBindingComponent } from "./data-binding/event-binding/event-binding.component";
+import { TwoWayComponent } from "./data-binding/two-way/two-way.component";
 @Component({
   selector: 'app-root',
   imports: [
@@ -16,7 +26,20 @@ import { EventhandlingComponent } from './eventhandling/eventhandling.component'
     ProfileComponent,
     CounterAppComponent,
     EventhandlingComponent,
-  ],
+    StudentResultComponent,
+    CapitalizePipe,
+    AttributeSelectorComponent,
+    ClassSelectorComponent,
+    IdSelectorComponent,
+    NameSelectorComponent,
+    StylesComponent,
+    StringInterpolationComponent,
+    PropertyBindingComponent,
+    ClassSelectorComponent,
+    ClassBindingComponent,
+    EventBindingComponent,
+    TwoWayComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -62,6 +85,7 @@ export class AppComponent {
   user1 = 'kanha';
   user2 = 'karthik';
   isActive: any;
+  classSelector: any;
 
   //Angular CLI
   //Angular CLI is a command line interface for Angular

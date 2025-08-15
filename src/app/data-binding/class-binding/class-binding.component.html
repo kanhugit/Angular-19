@@ -1,0 +1,21 @@
+<div class="container text-center">
+    <h1>{{title}}</h1>
+    <h3 [ngClass]="para">Paragraph with Class Binding</h3>
+    <h3 [ngClass]="btn">Button</h3>
+
+    <div class="card" style="width: 18rem;border: red;">
+        <div class="card-body">
+            <img src="girl.jpg" class="card-img-top" alt="...">
+            <h5 class="card-title">Card with Image</h5>
+            <p class="card-text">Cards can contain images at the top or bottom.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+
+        <br><br>
+    </div>
+    <h4 [ngStyle]="{color:'#00f', background:'#ccc'}"> design with ngStyle </h4>
+    <h4 [ngStyle]="css"> design with ngStyle </h4>
+
+    <h4></h4>
+
+</div>

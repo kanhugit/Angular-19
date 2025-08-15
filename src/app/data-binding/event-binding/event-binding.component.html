@@ -1,0 +1,86 @@
+<div class="container text-center  text-success">
+    <button (click)="sayHi()" class="btn btn-warning">Say Hi</button>
+    <output>{{name}}</output>
+
+
+    <div class="container py-4">
+        <h2 class="mb-4 text-primary text-center">Angular 19 Event Binding Playground</h2>
+
+        <!-- Click Events -->
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Click & Double Click</h5>
+                <button class="btn btn-success me-2" (click)="onClick()">Click Me</button>
+                <button class="btn btn-warning" (dblclick)="onDoubleClick()">Double Click Me</button>
+            </div>
+        </div>
+
+        <!-- Mouse Events -->
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Mouse Events</h5>
+                <div class="p-3 border rounded text-center" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()">
+                    {{ mouseMessage }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Keyboard Events -->
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Keyboard Events</h5>
+                <input type="text" class="form-control mb-2" placeholder="Type something..."
+                    (keydown)="onKeyDown($event)" (keyup)="onKeyUp($event)">
+                <p class="text-muted">{{ keyMessage }}</p>
+            </div>
+        </div>
+
+        <!-- Input, Change, Focus, Blur -->
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Input, Change, Focus & Blur</h5>
+                <input type="text" class="form-control mb-2" [(ngModel)]="inputValue" (input)="onInputChange()"
+                    (focus)="onFocus()" (blur)="onBlur()" placeholder="Enter text...">
+
+                <select class="form-select" [(ngModel)]="selectedOption" (change)="onSelectChange()">
+                    <option value="">-- Select Option --</option>
+                    <option value="Angular">Angular</option>
+                    <option value="React">React</option>
+                    <option value="Vue">Vue</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Right Click -->
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Right Click</h5>
+                <div class="p-3 border rounded text-center bg-light" (contextmenu)="onRightClick($event)">
+                    Right click inside this box
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Submit -->
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Form Submit</h5>
+                <form (submit)="onFormSubmit($event)">
+                    <input type="text" class="form-control mb-2" placeholder="Your name">
+                    <button type="submit" class="btn btn-primary">Submit Form</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Log Output -->
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Event Log</h5>
+                <ul class="list-group">
+                    <li *ngFor="let log of logMessages" class="list-group-item">{{ log }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

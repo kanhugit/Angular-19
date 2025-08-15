@@ -6,7 +6,7 @@
 
 <hr>
 <hr>
-<!-- ================================================== -->
+<!-- ================================================================================================ -->
 <h1>Interopolation In Angular19</h1>
 <p>{{x}}+{{y}} = {{x+y}}</p>
 
@@ -16,7 +16,8 @@
 <p>{{user1==user2}}</p>
 
 <!-- ============================================================ -->
- <hr><hr>
+<hr>
+<hr>
 <h1> Angular CLI </h1>
 <p>Angular CLI is a command line interface for Angular</p>
 <p>Angular CLI is used to create, develop, and maintain Angular applications</p>
@@ -50,13 +51,8 @@
 <p>Undefined: {{undefinedVariable}}</p>
 <p>Tuple: {{tupleVariable}}</p>
 <p>Enum: {{enumVariable}}</p>
-
-<!-- <p>Void: {{voidVariable}}</p> -->
-<!-- <p>Never: {{neverVariable}}</p> -->
-<!-- <p>Unknown: {{unknownVariable}}</p> -->
-
-
-<hr><hr>
+<hr>
+<hr>
 
 
 <button (click)="sum(10,20)" style="color: brown; text-align: center; align-items: center;">sum</button>
@@ -69,4 +65,39 @@
 <hr>
 <hr>
 <app-eventhandling></app-eventhandling>
+<br><br><br><br><br>
+<hr>
+<hr>
+<app-student-result></app-student-result>
 
+<h1>{{ 'angular custom pipe demo' | capitalize }}</h1>
+
+<hr>
+<hr><br><br><br><br><br>
+
+<!-- Attribute slector -->
+<div app-attribute-selector></div>
+
+<!-- Class Selector -->
+<div class="class-selector"></div>
+
+
+<!-- Id selector -->
+<div id="app-id-selector"></div>
+
+<!-- Name selector -->
+<app-name-selector></app-name-selector>
+
+<app-styles></app-styles>
+
+<br><br><br><br><br>
+<app-string-interpolation></app-string-interpolation>
+<br><br><br><br>
+<app-property-binding></app-property-binding>
+<br><br><br><br>
+<app-class-binding></app-class-binding>
+<br><br>
+<app-event-binding></app-event-binding>
+<br><br>
+<app-two-way></app-two-way>
+<br><br>
