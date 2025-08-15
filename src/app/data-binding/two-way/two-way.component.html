@@ -1,4 +1,30 @@
 <div class="container text-center">
-    <input type="search" (input)="updateName($event)" placeholder="Type Here" class="border-2 border-danger">
-    <output>{{name}}</output>
+    <h1>{{title}}</h1>
+    <!-- witout ngModel -->
+    <!-- <input type="search" (input)="updateName($event)" placeholder="Type Here" class="border-2 border-danger">
+    <output>{{name}}</output> -->
+
+    <!-- with ngModel -->
+    <input type="text" placeholder="type.." [(ngModel)]="name">
+    <h3>{{name}}</h3>
+
+
+<!--  -->
+    <div style="max-width: 400px; margin: auto; text-align: center; padding: 20px;">
+      <h2>🛒 Live Price Calculator</h2>
+
+      <div>
+        <label>Price (₹): </label>
+        <input type="number" [(ngModel)]="price" class="form-control" />
+      </div>
+
+      <div style="margin-top: 10px;">
+        <label>Quantity: </label>
+        <input type="number" [(ngModel)]="quantity" class="form-control" />
+      </div>
+
+      <div style="margin-top: 20px; font-size: 1.3em;">
+        <strong>Total: ₹{{ price * quantity }}</strong>
+      </div>
+    </div>
 </div>
