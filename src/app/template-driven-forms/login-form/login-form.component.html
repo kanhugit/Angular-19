@@ -1,0 +1,30 @@
+<div class="container text-center card card-body">
+    <h1>{{title}}</h1>
+
+    <form novalidate action="" #loginform="ngForm" (ngSubmit)="onSubmit(loginform)">
+
+        <dt>Name: <input type="text" required name="name" [(ngModel)]="model.name"></dt> <br>
+
+        <dt>Password: <input type="password" required name="pass" [(ngModel)]="model.password"></dt> <br>
+
+        <dt>Gender</dt>
+        <dd> <input type="radio" required name="gender" value="f" [(ngModel)]="model.gender"> : Female </dd>
+
+        <dd> <input type="radio" required name="gender" value="m" [(ngModel)]="model.gender"> : Male</dd> <br>
+
+        <dt>City: <select required name="city" [(ngModel)]="model.city">
+                <option disabled selected value="">--Choose City--</option>
+                <option>New Delhi</option>
+                <option>Chennai</option>
+                <option>Mumbai</option>
+                <option>Kolkata</option>
+            </select></dt> <br>
+
+        <dt><input type="checkbox" required name="terms" [(ngModel)]="model.terms"> : Terms</dt> <br>
+
+        <button [disabled]="loginform.invalid">Send</button>
+        <button (click)="loginform.reset()">Reset</button>
+
+    </form>
+
+</div>

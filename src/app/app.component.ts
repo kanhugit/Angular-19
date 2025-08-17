@@ -30,10 +30,13 @@ import { ProductCardComponent } from './control-flow/if-else-control/product-car
 import { AccountComponent } from './control-flow/if-else-control/account/account.component';
 import { ArticleComponent } from './control-flow/if-else-control/article/article.component';
 import { BookingComponent } from './control-flow/if-else-control/booking/booking.component';
-import { ForloopComponent } from "./control-flow/forloop/forloop.component";
-import { ProductDashboardComponent } from "./pipes/product-dashboard.component";
-import { PurePipeExampleComponent } from "./pipes/pure-pipe-example.component";
-import { ImpurePipeExampleComponent } from "./pipes/impure-pipe-example.component";
+import { ForloopComponent } from './control-flow/forloop/forloop.component';
+import { ProductDashboardComponent } from './pipes/product-dashboard.component';
+import { PurePipeExampleComponent } from './pipes/pure-pipe-example.component';
+import { ImpurePipeExampleComponent } from './pipes/impure-pipe-example.component';
+import { LoginFormComponent } from "./template-driven-forms/login-form/login-form.component";
+import { FormValidationComponent } from "./template-driven-forms/form-validation/form-validation.component";
+import { KycFormComponent } from "./template-driven-forms/kyc-form/kyc-form.component";
 @Component({
   selector: 'app-root',
   imports: [
@@ -72,7 +75,10 @@ import { ImpurePipeExampleComponent } from "./pipes/impure-pipe-example.componen
     ForloopComponent,
     ProductDashboardComponent,
     PurePipeExampleComponent,
-    ImpurePipeExampleComponent
+    ImpurePipeExampleComponent,
+    LoginFormComponent,
+    FormValidationComponent,
+    KycFormComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
