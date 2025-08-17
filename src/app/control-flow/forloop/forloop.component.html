@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <h2 class="text-center text-primary mb-4">🛒 Available Products</h2>
+
+  <div class="row g-3">
+    @for (product of products; track product.id) {
+      <div class="col-md-3">
+        <div class="card shadow-lg border-0 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text text-success fw-bold">₹ {{ product.price }}</p>
+
+            @if (product.available) {
+              <span class="badge bg-success">In Stock</span>
+            } @else {
+              <span class="badge bg-danger">Out of Stock</span>
+            }
+          </div>
+        </div>
+      </div>
+    } @empty {
+      <div class="col-12 text-center">
+        <div class="alert alert-warning">
+          🚫 No products available right now.
+        </div>
+      </div>
+    }
+  </div>
+</div>

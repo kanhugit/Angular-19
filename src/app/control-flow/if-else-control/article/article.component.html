@@ -1,0 +1,11 @@
+<!-- article.component.html -->
+<div class="card p-3 shadow mb-3">
+  <h2>{{ article.title }}</h2>
+
+  @if (isPremiumUser) {
+    <p>{{ article.fullContent }}</p>
+  } @else {
+    <p>{{ article.preview }}...</p>
+    <a href="/subscribe" class="btn btn-warning">Subscribe to Read More</a>
+  }
+</div>

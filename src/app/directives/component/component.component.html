@@ -1,0 +1,12 @@
+<div class="card shadow-sm p-3 mb-3 rounded"
+    [ngClass]="{'border-success': status === 'Active', 'border-danger': status === 'Inactive'}">
+
+    <h5 class="card-title">{{ name }}</h5>
+    <p class="card-text">
+        <strong>Role:</strong> {{ role }}
+    </p>
+
+    <span class="badge" [ngClass]="status === 'Active' ? 'bg-success' : 'bg-danger'">
+        {{ status }}
+    </span>
+</div>

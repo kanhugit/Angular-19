@@ -1,0 +1,11 @@
+<div class="card shadow p-3 mb-3" style="width: 18rem;">
+  <h4>{{ product.name }}</h4>
+  <p>Price: ₹{{ product.price }}</p>
+
+  @if (product.inStock) {
+    <span class="badge bg-success">✅ In Stock</span>
+    <button class="btn btn-primary btn-sm mt-2">Add to Cart</button>
+  } @else {
+    <span class="badge bg-danger">❌ Out of Stock</span>
+  }
+</div>

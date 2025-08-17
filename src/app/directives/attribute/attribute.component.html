@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">📋 Task Manager</h2>
+
+  <!-- Add Task Input -->
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Enter new task..."
+           [(ngModel)]="newTask">
+    <button class="btn btn-primary" (click)="addTask()">Add Task</button>
+  </div>
+
+  <!-- Task List -->
+  <ul class="list-group">
+    <li *ngFor="let task of tasks"
+        class="list-group-item  d-flex justify-content-between align-items-center"
+        [ngClass]="{
+          'list-group-item-success': task.completed,
+          'list-group-item-danger': !task.completed,
+          'list-group-item-warning': isOverdue(task)
+        }"
+        [ngStyle]="{
+          'font-weight': isOverdue(task) ? 'bold' : 'normal',
+          'text-decoration': task.completed ? 'line-through' : 'none'
+        }">
+
+      {{ task.title }} - <small>Due: {{ task.dueDate | date:'mediumDate' }}</small>
+
+      <button class="btn btn-sm"
+              [ngClass]="task.completed ? 'btn-outline-danger' : 'btn-outline-success'"
+              (click)="toggleTask(task)">
+        {{ task.completed ? 'Undo' : 'Complete' }}
+      </button>
+    </li>
+  </ul>
+</div>

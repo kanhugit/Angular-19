@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">📦 Product Catalog</h2>
+
+  <div class="row g-4">
+    <!-- Using *ngFor to loop products -->
+    <div class="col-md-3" *ngFor="let product of products; index as i">
+      <div class="card h-100 shadow-lg border-0">
+        <img [src]="product.image" class="card-img-top" alt="{{ product.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text text-muted">{{ product.description }}</p>
+          <p class="fw-bold text-success">₹ {{ product.price }}</p>
+        </div>
+        <div class="card-footer bg-white">
+          <button class="btn btn-primary w-100">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

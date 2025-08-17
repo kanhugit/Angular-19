@@ -19,8 +19,21 @@ import { EventBindingComponent } from './data-binding/event-binding/event-bindin
 import { TwoWayComponent } from './data-binding/two-way/two-way.component';
 import { ChildComponent } from './child/child.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { CommonModule } from '@angular/common';
 import { ParentComponent } from './parent/parent.component';
+import { NgifComponent } from './directives/structtural/ngif/ngif.component';
+import { NgforComponent } from './directives/structtural/ngfor/ngfor.component';
+import { NgswitchComponent } from './directives/structtural/ngswitch/ngswitch.component';
+import { AttributeComponent } from './directives/attribute/attribute.component';
+import { ComponentComponent } from './directives/component/component.component';
+import { DashboardComponent } from './control-flow/if-else-control/dashboard/dashboard.component';
+import { ProductCardComponent } from './control-flow/if-else-control/product-card/product-card.component';
+import { AccountComponent } from './control-flow/if-else-control/account/account.component';
+import { ArticleComponent } from './control-flow/if-else-control/article/article.component';
+import { BookingComponent } from './control-flow/if-else-control/booking/booking.component';
+import { ForloopComponent } from "./control-flow/forloop/forloop.component";
+import { ProductDashboardComponent } from "./pipes/product-dashboard.component";
+import { PurePipeExampleComponent } from "./pipes/pure-pipe-example.component";
+import { ImpurePipeExampleComponent } from "./pipes/impure-pipe-example.component";
 @Component({
   selector: 'app-root',
   imports: [
@@ -45,7 +58,21 @@ import { ParentComponent } from './parent/parent.component';
     TwoWayComponent,
     ChildComponent,
     ProductListComponent,
-    ParentComponent
+    ParentComponent,
+    NgifComponent,
+    NgforComponent,
+    NgswitchComponent,
+    AttributeComponent,
+    ComponentComponent,
+    ProductCardComponent,
+    DashboardComponent,
+    AccountComponent,
+    BookingComponent,
+    ArticleComponent,
+    ForloopComponent,
+    ProductDashboardComponent,
+    PurePipeExampleComponent,
+    ImpurePipeExampleComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -55,6 +82,17 @@ export class AppComponent {
   title = 'my-app-19';
   name = 'Angular 19 Application';
   message = 'Hello Child  from parent ';
+
+  product = { name: 'Laptop', price: 55000, inStock: false };
+  user = { name: 'Avinash', role: 'admin' };
+  balance = 0;
+  room = { type: 'Deluxe Room', price: 2500, isAvailable: true };
+  article = {
+    title: 'AI is Revolutionizing the World',
+    fullContent: 'Full article content goes here with deep insights...',
+    preview: 'AI is changing industries rapidly',
+  };
+  isPremiumUser = false;
   // const title = 'my-app-19'; //we cant use (variable)const here as it is not a class property
   // const name = 'Angular 19 Application'; //we cant use const here as it is not a class property
   //in class we cant use const or let, we can only use properties of the class

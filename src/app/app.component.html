@@ -69,9 +69,6 @@
 <hr>
 <hr>
 <app-student-result></app-student-result>
-
-<h1>{{ 'angular custom pipe demo' | capitalize }}</h1>
-
 <hr>
 <hr><br><br><br><br><br>
 
@@ -107,4 +104,38 @@
 <app-product-list />
 
 <!-- @OUTPUT  Decorator-->
-<app-parent/>
+<app-parent />
+
+<!-- Directives  -->
+<!-- Structural Directives -->
+<app-ngif></app-ngif>
+<app-ngfor></app-ngfor>
+<app-ngswitch></app-ngswitch>
+<!-- Attributube Directives -->
+<app-attribute></app-attribute>
+<!-- component directives -->
+<div class="container mt-4">
+    <h2 class="mb-3">👩‍💻 Employee Dashboard</h2>
+    <!-- Using our Component Directive -->
+    <app-component name="Kanhu Behera" role="Java Full Stack Developer" status="Active"></app-component>
+    <app-component name="Rahul Singh" role="Frontend Developer" status="Inactive"></app-component>
+    <app-component name="Priya Sharma" role="Project Manager" status="Active"></app-component>
+</div>
+
+
+<!-- @if / @else -->
+<app-product-card [product]="product"></app-product-card>
+<app-dashboard [user]="user"></app-dashboard>
+<app-account [balance]="balance"></app-account>
+<app-booking [room]="room"></app-booking>
+<app-article [article]="article" [isPremiumUser]="isPremiumUser"></app-article>
+
+<!-- @for loop -->
+<app-forloop></app-forloop>
+
+<!-- pipe example -->
+<h1>{{ 'angular build in pipes demo' | capitalize }}</h1>
+<p> {{ 'hello angular i am capitalize pipe ' | capitalize}}</p>
+<app-product-dashboard></app-product-dashboard>
+  <app-pure-pipe-example></app-pure-pipe-example>
+<app-impure-pipe-example></app-impure-pipe-example>

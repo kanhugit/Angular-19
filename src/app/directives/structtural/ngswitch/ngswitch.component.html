@@ -1,0 +1,56 @@
+<div class="container mt-5">
+  <div class="card shadow-lg border-0 rounded-3">
+    <div class="card-header bg-primary text-white text-center">
+      <h3>User Dashboard with NgSwitch 🚀</h3>
+    </div>
+    <div class="card-body">
+
+      <!-- Dropdown to choose role -->
+      <div class="mb-3">
+        <label class="form-label fw-bold">Select User Role:</label>
+        <select class="form-select" (change)="changeRole($event)">
+          <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+        </select>
+      </div>
+
+      <!-- NgSwitch Example -->
+      <div [ngSwitch]="selectedRole()">
+
+        <!-- Admin Section -->
+        <div *ngSwitchCase="'Admin'" class="alert alert-danger">
+          <h4>👑 Admin Panel</h4>
+          <ul class="list-group">
+            <li class="list-group-item">Manage Users</li>
+            <li class="list-group-item">View Reports</li>
+            <li class="list-group-item">System Settings</li>
+          </ul>
+        </div>
+
+        <!-- Editor Section -->
+        <div *ngSwitchCase="'Editor'" class="alert alert-warning">
+          <h4>✍️ Editor Workspace</h4>
+          <ul class="list-group">
+            <li class="list-group-item">Create Content</li>
+            <li class="list-group-item">Edit Articles</li>
+            <li class="list-group-item">Publish Posts</li>
+          </ul>
+        </div>
+
+        <!-- Viewer Section -->
+        <div *ngSwitchCase="'Viewer'" class="alert alert-success">
+          <h4>👀 Viewer Dashboard</h4>
+          <ul class="list-group">
+            <li class="list-group-item">Browse Articles</li>
+            <li class="list-group-item">Like & Share</li>
+            <li class="list-group-item">Comment on Posts</li>
+          </ul>
+        </div>
+
+        <!-- Default Section -->
+        <div *ngSwitchDefault class="alert alert-info">
+          <h4>Please select a role to continue...</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

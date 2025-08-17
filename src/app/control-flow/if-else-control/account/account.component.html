@@ -1,0 +1,12 @@
+<!-- account.component.html -->
+<div class="card p-3 shadow mb-3">
+  <h4>Your Account Balance</h4>
+
+  @if (balance > 0) {
+    <p class="text-success">💰 Available Balance: ₹{{ balance }}</p>
+  } @else {
+    <p class="text-danger">⚠️ Insufficient Balance</p>
+    <button class="btn btn-danger btn-sm">Add Funds</button>
+  }
+</div>
+

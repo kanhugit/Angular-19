@@ -1,0 +1,13 @@
+<div class="container p-3 border shadow rounded mb-3">
+  <h2>Welcome, {{ user.name }}</h2>
+
+  @if (user.role === 'admin') {
+    <div class="alert alert-warning">
+      🛠️ Admin Access: You can manage users, settings, and reports.
+    </div>
+  } @else {
+    <div class="alert alert-info">
+      👤 User Access: You can view your profile and reports only.
+    </div>
+  }
+</div>

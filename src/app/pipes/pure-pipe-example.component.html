@@ -1,0 +1,12 @@
+<div class="container mt-4">
+    <h2 class="text-primary">Pure Pipe Example - Capitalize Names</h2>
+
+    <ul class="list-group mb-3">
+        <li *ngFor="let user of users" class="list-group-item">
+            {{ user | capitalize }}
+        </li>
+    </ul>
+
+    <input #newUser type="text" class="form-control mb-2" placeholder="Enter new user" />
+    <button class="btn btn-success" (click)="addUser(newUser.value)">Add User</button>
+</div>
