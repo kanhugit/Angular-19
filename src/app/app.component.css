@@ -19,3 +19,7 @@ p{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     
 }
+
+
+nav a { padding: 8px 12px; text-decoration: none; background: #eee; margin-right: 8px; border-radius: 6px; }
+nav a.active { background: #222; color: #fff; }

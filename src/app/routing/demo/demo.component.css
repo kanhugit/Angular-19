@@ -1,0 +1,12 @@
+           <!--app.component.css-->
+nav a{
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    margin-right: 10px;
+    background: #ccc;
+}
+nav a.active{ 
+    background: #222; 
+    color: #fff;
+}

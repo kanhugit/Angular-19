@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './customcomponet/profile.componet';
@@ -42,6 +42,12 @@ import { KYCReactiveFormComponent } from "./reactive-forms/kyc-reactive-form/kyc
 import { EmulatedComponent } from "./view-encapsulation/emulated/emulated.component";
 import { NoneComponent } from "./view-encapsulation/none/none.component";
 import { ShadowDOMComponent } from "./view-encapsulation/shadow-dom/shadow-dom.component";
+import { DemoComponent } from "./routing/demo/demo.component";
+import { HashLocationComponent } from "./routing/hash-location/hash-location.component";
+import { ProductComponent } from "./routing/product/product.component";
+import { P1Component } from "./routing/p1/p1.component";
+import { P2Component } from "./routing/p2/p2.component";
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   imports: [
@@ -88,7 +94,10 @@ import { ShadowDOMComponent } from "./view-encapsulation/shadow-dom/shadow-dom.c
     KYCReactiveFormComponent,
     EmulatedComponent,
     NoneComponent,
-    ShadowDOMComponent
+    ShadowDOMComponent,
+    DemoComponent,
+    RouterOutlet,
+    CommonModule
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
