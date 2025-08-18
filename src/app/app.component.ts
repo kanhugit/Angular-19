@@ -37,6 +37,11 @@ import { ImpurePipeExampleComponent } from './pipes/impure-pipe-example.componen
 import { LoginFormComponent } from "./template-driven-forms/login-form/login-form.component";
 import { FormValidationComponent } from "./template-driven-forms/form-validation/form-validation.component";
 import { KycFormComponent } from "./template-driven-forms/kyc-form/kyc-form.component";
+import { DemoFromComponent } from "./reactive-forms/demo-from/demo-from.component";
+import { KYCReactiveFormComponent } from "./reactive-forms/kyc-reactive-form/kyc-reactive-form.component";
+import { EmulatedComponent } from "./view-encapsulation/emulated/emulated.component";
+import { NoneComponent } from "./view-encapsulation/none/none.component";
+import { ShadowDOMComponent } from "./view-encapsulation/shadow-dom/shadow-dom.component";
 @Component({
   selector: 'app-root',
   imports: [
@@ -78,7 +83,12 @@ import { KycFormComponent } from "./template-driven-forms/kyc-form/kyc-form.comp
     ImpurePipeExampleComponent,
     LoginFormComponent,
     FormValidationComponent,
-    KycFormComponent
+    KycFormComponent,
+    DemoFromComponent,
+    KYCReactiveFormComponent,
+    EmulatedComponent,
+    NoneComponent,
+    ShadowDOMComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -115,11 +115,11 @@
 <app-attribute></app-attribute>
 <!-- component directives -->
 <div class="container mt-4">
-    <h2 class="mb-3">👩‍💻 Employee Dashboard</h2>
-    <!-- Using our Component Directive -->
-    <app-component name="Kanhu Behera" role="Java Full Stack Developer" status="Active"></app-component>
-    <app-component name="Rahul Singh" role="Frontend Developer" status="Inactive"></app-component>
-    <app-component name="Priya Sharma" role="Project Manager" status="Active"></app-component>
+  <h2 class="mb-3">👩‍💻 Employee Dashboard</h2>
+  <!-- Using our Component Directive -->
+  <app-component name="Kanhu Behera" role="Java Full Stack Developer" status="Active"></app-component>
+  <app-component name="Rahul Singh" role="Frontend Developer" status="Inactive"></app-component>
+  <app-component name="Priya Sharma" role="Project Manager" status="Active"></app-component>
 </div>
 
 
@@ -137,11 +137,19 @@
 <h1>{{ 'angular build in pipes demo' | capitalize }}</h1>
 <p> {{ 'hello angular i am capitalize pipe ' | capitalize}}</p>
 <app-product-dashboard></app-product-dashboard>
-  <app-pure-pipe-example></app-pure-pipe-example>
+<app-pure-pipe-example></app-pure-pipe-example>
 <app-impure-pipe-example></app-impure-pipe-example>
 
 
 <!-- Template driven forms -->
- <app-login-form></app-login-form>
- <app-form-validation></app-form-validation>
- <app-kyc-form></app-kyc-form>
+<app-login-form></app-login-form>
+<app-form-validation></app-form-validation>
+<app-kyc-form></app-kyc-form>
+<!-- Reactive Forms -->
+<app-demo-from></app-demo-from>
+<app-kyc-reactive-form></app-kyc-reactive-form>
+
+<!-- View Encapsulation -->
+<app-emulated></app-emulated>
+<app-none></app-none>
+<app-shadow-dom></app-shadow-dom>

@@ -1,0 +1,18 @@
+<div class="container card card-body card-header mt-5">
+    <h1>{{title}}</h1>
+
+<form novalidate [formGroup]="loginform" (ngSubmit)="loginUser()">
+
+    <label>Email: <input type="email" name="email" formControlName="email"></label>
+    <span *ngIf="loginform.get('email')?.hasError('required') && loginform.get('email')?.pristine">Email required</span> <br>
+    <span *ngIf="loginform.get('email')?.invalid && loginform.get('email')?.dirty">Email Invalid</span> <br>
+
+    <label>Password: <input type="password" name="email" formControlName="pass"></label> <br>
+    <span *ngIf="loginform.get('pass')?.invalid && loginform.get('pass')?.pristine">password required</span>
+    <span *ngIf="!loginform.get('pass')?.valid && loginform.get('pass')?.dirty"> Password Invalid</span> <br>
+    <button>send</button> <br>
+    <p>{{loginform.value | json}}</p>
+    <p>{{loginform.status}}</p>
+    <p>{{loginform.valid}}</p>
+</form>
+</div>

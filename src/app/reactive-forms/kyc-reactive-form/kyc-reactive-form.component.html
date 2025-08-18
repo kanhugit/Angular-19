@@ -1,0 +1,98 @@
+<div class="container mt-4">
+  <h2 class="text-center text-primary">KYC Form (Reactive)</h2>
+  <form [formGroup]="kycForm" (ngSubmit)="onSubmit()" novalidate>
+
+    <!-- Full Name -->
+    <div class="mb-3">
+      <label class="form-label">Full Name</label>
+      <input type="text" class="form-control" formControlName="fullName" placeholder="Enter your full name">
+      <div *ngIf="submitted && f['fullName'].errors" class="text-danger">
+        <small *ngIf="f['fullName'].errors['required']">Full Name is required</small>
+        <small *ngIf="f['fullName'].errors['minlength']">Minimum 3 characters required</small>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" formControlName="email" placeholder="Enter your email">
+      <div *ngIf="submitted && f['email'].errors" class="text-danger">
+        <small *ngIf="f['email'].errors['required']">Email is required</small>
+        <small *ngIf="f['email'].errors['email']">Invalid email format</small>
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="mb-3">
+      <label class="form-label">Phone</label>
+      <input type="text" class="form-control" formControlName="phone" placeholder="Enter 10-digit mobile number">
+      <div *ngIf="submitted && f['phone'].errors" class="text-danger">
+        <small *ngIf="f['phone'].errors['required']">Phone number is required</small>
+        <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit Indian number</small>
+      </div>
+    </div>
+
+    <!-- DOB -->
+    <div class="mb-3">
+      <label class="form-label">Date of Birth</label>
+      <input type="date" class="form-control" formControlName="dob">
+      <div *ngIf="submitted && f['dob'].errors" class="text-danger">
+        <small>Date of Birth is required</small>
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div class="mb-3">
+      <label class="form-label">Address</label>
+      <textarea class="form-control" formControlName="address" placeholder="Enter your address"></textarea>
+      <div *ngIf="submitted && f['address'].errors" class="text-danger">
+        <small *ngIf="f['address'].errors['required']">Address is required</small>
+        <small *ngIf="f['address'].errors['minlength']">Minimum 10 characters required</small>
+      </div>
+    </div>
+
+    <!-- Aadhaar -->
+    <div class="mb-3">
+      <label class="form-label">Aadhaar Number</label>
+      <input type="text" class="form-control" formControlName="aadhaar" placeholder="Enter 12-digit Aadhaar number">
+      <div *ngIf="submitted && f['aadhaar'].errors" class="text-danger">
+        <small *ngIf="f['aadhaar'].errors['required']">Aadhaar is required</small>
+        <small *ngIf="f['aadhaar'].errors['pattern']">Must be 12 digits</small>
+      </div>
+    </div>
+
+    <!-- PAN -->
+    <div class="mb-3">
+      <label class="form-label">PAN Number</label>
+      <input type="text" class="form-control" formControlName="pan" placeholder="ABCDE1234F">
+      <div *ngIf="submitted && f['pan'].errors" class="text-danger">
+        <small *ngIf="f['pan'].errors['required']">PAN is required</small>
+        <small *ngIf="f['pan'].errors['pattern']">Invalid PAN format</small>
+      </div>
+    </div>
+
+    <!-- Gender -->
+    <div class="mb-3">
+      <label class="form-label">Gender</label>
+      <div>
+        <input type="radio" value="Male" formControlName="gender"> Male
+        <input type="radio" value="Female" formControlName="gender" class="ms-3"> Female
+      </div>
+      <div *ngIf="submitted && f['gender'].errors" class="text-danger">
+        <small>Gender is required</small>
+      </div>
+    </div>
+
+    <!-- Upload Document -->
+    <div class="mb-3">
+      <label class="form-label">Upload ID Proof</label>
+      <input type="file" class="form-control" (change)="onFileChange($event)">
+      <div *ngIf="submitted && f['document'].errors" class="text-danger">
+        <small>Document upload is required</small>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary w-100">Submit KYC</button>
+  </form>
+</div>
